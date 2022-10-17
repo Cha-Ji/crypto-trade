@@ -19,7 +19,7 @@ class RatioActivity : BaseActivity<ActivityRatioBinding>(R.layout.activity_ratio
     private fun setFragment() {
         when (intent.getStringExtra(RATIO_TYPE)) {
             RATIO_K -> { navigateRatioFragment(KRationFragment()) }
-            RATIO_P -> { navigateRatioFragment(PRatioFragment()) }
+            RATIO_MDD -> { navigateRatioFragment(MddRatioFragment()) }
         }
     }
 
@@ -36,6 +36,6 @@ class RatioActivity : BaseActivity<ActivityRatioBinding>(R.layout.activity_ratio
     companion object {
         const val RATIO_TYPE = "ratio_type"
         const val RATIO_K = "K"
-        const val RATIO_P = "P"
+        const val RATIO_MDD = "MDD"
     }
 }

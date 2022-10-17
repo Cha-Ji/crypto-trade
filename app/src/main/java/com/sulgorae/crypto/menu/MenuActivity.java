@@ -84,7 +84,7 @@ public class MenuActivity extends AppCompatActivity {
         TextView textView7 = (TextView) findViewById(R.id.textView7);
         textView7.setOnClickListener(view -> {
             Intent menuIntent = new Intent(getApplicationContext(), RatioActivity.class);
-            menuIntent.putExtra(RatioActivity.RATIO_TYPE, RatioActivity.RATIO_P);
+            menuIntent.putExtra(RatioActivity.RATIO_TYPE, RatioActivity.RATIO_MDD);
             startActivity(menuIntent);
         });
 

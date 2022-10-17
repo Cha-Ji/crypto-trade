@@ -5,12 +5,12 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.sulgorae.crypto.R
 import com.sulgorae.crypto.common.BaseFragment
-import com.sulgorae.crypto.databinding.FragmentPRatioBinding
+import com.sulgorae.crypto.databinding.FragmentMddRatioBinding
 import com.sulgorae.crypto.di.Injection
 import com.sulgorae.crypto.di.ViewModelFactory
 import com.sulgorae.crypto.utils.toLineData
 
-class PRatioFragment : BaseFragment<FragmentPRatioBinding>(R.layout.fragment_p_ratio) {
+class MddRatioFragment : BaseFragment<FragmentMddRatioBinding>(R.layout.fragment_mdd_ratio) {
 
     private val ratioViewModel: RatioViewModel by lazy {
         ViewModelProvider(this, ViewModelFactory(Injection.exchangeDataSource, Injection.quotationDataSource))[RatioViewModel::class.java]
