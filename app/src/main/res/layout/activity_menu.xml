@@ -82,7 +82,7 @@
         android:drawableRight="@drawable/tv7_menu_graph"
         android:padding="15dp"
         android:fontFamily="@font/one_pop"
-        android:text="기간에 따른 수익률"
+        android:text="@string/mdd_by_k"
         android:textColor="@color/white"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"

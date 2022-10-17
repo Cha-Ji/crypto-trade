@@ -16,7 +16,7 @@
             android:id="@+id/tv_pRatio_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="기간에 따른 수익률 화면"
+            android:text="@string/mdd_by_k"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
