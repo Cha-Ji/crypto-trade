@@ -25,11 +25,11 @@ class MddRatioFragment : BaseFragment<FragmentMddRatioBinding>(R.layout.fragment
     }
 
     private fun setChart() {
-        ratioViewModel.setProfit()
+        ratioViewModel.setMddDataSet()
     }
 
     private fun showChart() {
-        ratioViewModel.kDataSet.observe(requireActivity()) { dataSet ->
+        ratioViewModel.mddDataSetByK.observe(requireActivity()) { dataSet ->
             with(binding.lineChartPRatio) {
                 val inputData = dataSet.toLineData(R.drawable.crypto1)
                 data = inputData

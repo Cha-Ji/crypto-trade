@@ -16,12 +16,12 @@ class RatioViewModel(
     private val quotationDataSource: QuotationDataSource
 ) : ViewModel() {
 
-    private var _kDataSet = MutableLiveData<List<MddDataSet>>()
-    val kDataSet: LiveData<List<MddDataSet>> = _kDataSet
+    private var _mddDataSetByK = MutableLiveData<List<MddDataSet>>()
+    val mddDataSetByK: LiveData<List<MddDataSet>> = _mddDataSetByK
 
-    fun setProfit(market: String = "KRW-BTC") {
+    fun setMddDataSet(market: String = "KRW-BTC") {
         viewModelScope.launch {
-            _kDataSet.value = kList.map { k ->
+            _mddDataSetByK.value = kList.map { k ->
                 with (getMaxMinProfit(market, toList, k)) {
                     MddDataSet(mdd = getMdd(first, second), period = toList.first() + toList.last(), k = k)
                 }

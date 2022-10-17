@@ -3,7 +3,6 @@ package com.sulgorae.crypto.ratio
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
-import com.github.mikephil.charting.components.XAxis
 import com.sulgorae.crypto.R
 import com.sulgorae.crypto.common.BaseFragment
 import com.sulgorae.crypto.databinding.FragmentKRatioBinding
@@ -26,11 +25,11 @@ class KRationFragment : BaseFragment<FragmentKRatioBinding>(R.layout.fragment_k_
     }
 
     private fun setChart() {
-        ratioViewModel.setProfit()
+        ratioViewModel.setMddDataSet()
     }
 
     private fun showChart() {
-        ratioViewModel.kDataSet.observe(requireActivity()) { dataSet ->
+        ratioViewModel.mddDataSetByK.observe(requireActivity()) { dataSet ->
             with (binding.lineChartKRatio) {
                 val inputData = dataSet.toLineData(R.drawable.crypto1)
                 data = inputData
